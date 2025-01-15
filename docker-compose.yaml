@@ -66,6 +66,8 @@ services:
         target: /app
         consistency: cached
       - /app/node_modules
+          networks:
+      - dokploy-network
     ports:
       - "5173:5173"
     command: pnpm run dev --host 0.0.0.0
